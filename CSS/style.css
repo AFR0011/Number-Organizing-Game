@@ -1,0 +1,75 @@
+/* 
+    -Basic structure - DONE
+    -Add embellishments - IN PROGRESS
+*/
+.container table{ /*tables' container*/
+    display:inline;
+}
+table, td{ /*borders, text*/
+    outline: 1px solid black; 
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    user-select: none;
+}
+table { /*table border and width*/
+    width: 300px; 
+    margin: 5%;
+    border: 2px solid black;
+}
+tr { /*tr dimensions*/
+    height: 100px;
+    width: 100%;
+}
+td { /*td dimensions*/
+    width: 33%;
+    height: 33%;
+}
+/*Table background color*/
+tr td {
+    background-color: rgb(200,200,200);
+}
+tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even) {
+    background-color: rgb(150,150,150);
+}
+td div {
+    height: 50px;
+    width: 96px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+/*Table cell for when checking answer*/
+#table2 td.correct {
+    background-color: lightgreen;
+}
+
+#table2 td.incorrect {
+    background-color: red;
+}
+/**/
+
+/* Popup messages */
+.popup-container{
+    display:none;
+    z-index:1;
+    position:absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    text-align: center;
+    width:100%;
+    height:100%;
+    background-color:rgba(60,60,60,0.5);
+}
+.incorrect-popup, .correct-popup {
+    position:relative;
+    top:40%;
+    left:50%;
+    translate: -50% -50%;
+}
+/**/
